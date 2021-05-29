@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListadoComponent } from './components/listado/listado.component';
-import { GruposComponent } from './components/grupos/grupos.component';
 import { GruposRockModule } from './components/grupos-rock.module';
 
 @NgModule({
