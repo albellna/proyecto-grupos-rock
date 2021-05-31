@@ -12,7 +12,6 @@ export class DetallesGrupoComponent implements OnInit {
 
   id: any;
   grupo: GruposRock = {
-    id: 0,
     name: '',
     anyosActivos: '',
     miembros: '',
@@ -23,7 +22,6 @@ export class DetallesGrupoComponent implements OnInit {
     this.activatedRoute.params.subscribe(response => {
       this.id = response.id;
     });
-    this.grupo = JSON.parse(localStorage.getItem('gruposRock')!) || [];
   }
 
   ngOnInit(): void {
@@ -31,7 +29,8 @@ export class DetallesGrupoComponent implements OnInit {
   }
 
   public detallesGrupo() {
-    this.id = this.id - 1;
-    this.grupo = this.gruposService.grupos[this.id];
+    this.gruposService.listarUnGrupo(this.id).subscribe(data => {
+      this.grupo = data;
+    });
   }
 }

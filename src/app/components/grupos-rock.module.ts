@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { ListadoComponent } from './listado/listado.component';
 import { GruposComponent } from './grupos/grupos.component';
 import { DetallesGrupoComponent } from './detalles-grupo/detalles-grupo.component';
+import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.component';
 
 
 @NgModule({
   declarations: [
     ListadoComponent,
     GruposComponent,
-    DetallesGrupoComponent
+    DetallesGrupoComponent,
+    BarraBusquedaComponent
   ],
   exports: [
     ListadoComponent

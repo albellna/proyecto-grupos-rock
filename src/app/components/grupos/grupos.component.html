@@ -1,20 +1,12 @@
 <h1>Grupos de rock</h1>
 <hr>
-<h5>Buscar:</h5>
-<input
-    type="text"
-    class="form-control"
-    placeholder="Buscar grupo, artista, año..."
-    (keyup.enter)="buscar()"
-    #txtBuscar
->
 <ul class="list-group">
-    <li class="list-group-item" *ngFor="let grupo of gruposArray">
-        <h2>{{grupo.name}}</h2> 
-        <ul>
-            <li *ngFor="let miembros of grupo.miembros">{{miembros}}</li>
-        </ul>
-        <button (click)="detallesGrupo(grupo.id)">Ver detalles</button>
-        <button (click)="borrarProyecto(grupo.id)">Borrar</button>
-    </li>
+    <div *ngIf="gruposArray != []">
+        <li class="list-group-item" *ngFor="let grupo of gruposArray">
+            <h2>{{grupo.name}}</h2> 
+                <p>{{grupo.miembros}}</p>
+            <button (click)="detallesGrupo(grupo._id)">Ver detalles</button>
+            <button (click)="borrarGrupo(grupo._id)">Borrar</button>
+        </li>
+    </div>
 </ul>
