@@ -1,0 +1,23 @@
+<div>
+    <h1 class="tituloBanda">{{grupo.name}}</h1>
+    <div>
+        <h3>Miembros:</h3>
+        <p>{{grupo.miembros}}</p>
+        <h4>Periodo de actividad:</h4>
+        <p>{{grupo.anyosActivos}}</p>
+        <h4>Descripción:</h4>
+        <p>{{grupo.descripcion}}</p>
+    </div>
+    <div class="video">
+        <iframe width="560" height="315" [src]="safeURL()" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+<div class="row botones">
+    <div class="col-sm-6">
+        <button (click)="modificarGrupo(id)">Modificar datos</button>
+    </div>
+    <div class="col-sm-6">
+        <button (click)="volverButton()">Volver</button>
+    </div>
+</div>
+

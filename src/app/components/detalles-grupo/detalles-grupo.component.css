@@ -1,0 +1,24 @@
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+.botones {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px 10px;
+    width: 100%;
+  }
+
+  .tituloBanda {
+    font-family: 'Metal Mania';
+    font-size: 50px;
+}

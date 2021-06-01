@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'RocknRoll One', sans-serif;
+  }
+
+  html, body {
+    color: #4e4e4e;
+    background: url(assets/images/3387872265_a513d0e31b_b.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  button:hover {
+    color: white;
+    background-color: #3e4144;
+  }
+  
+  button:focus{ 
+    outline: none;
+  }

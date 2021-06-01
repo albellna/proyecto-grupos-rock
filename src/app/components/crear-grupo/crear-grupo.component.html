@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Crear nuevo grupo</h2>
+    <form id="formularioGrupo" name="form" (ngSubmit)="onCreate(); f.reset()" #f="ngForm" novalidate>
+      <div class="form-group">
+        <label for="name">Nombre del grupo: </label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="form.name" required autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="anyosActivos">Periodo de actividad: </label>
+        <input type="text" class="form-control" name="anyosActivos" [(ngModel)]="form.anyosActivos" required autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="miembros">Miembros: </label>
+        <input type="text" class="form-control" name="miembros" [(ngModel)]="form.miembros" required autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción: </label>
+        <textarea Input class="form-control" name="descripcion" [(ngModel)]="form.descripcion" required autocomplete="off"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="video">URL del video: </label>
+        <input type="text" class="form-control" name="video" [(ngModel)]="form.video" required autocomplete="off">
+        <p><span class="importante">NOTA:</span> El vídeo tiene que tener el siguiente formato https://www.youtube.com/embed/&lt;código del vídeo&gt;</p>
+        <p><span class="importante">Ejemplo:</span> https://www.youtube.com/embed/nrIPxlFzDi0</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <button type="submit" [disabled]="!f.valid">Crear</button>
+        </div>
+        <div class="col-sm-6">
+          <button (click)="volverButton()">Volver</button>
+        </div>
+      </div>
+    </form>
+    <br>
+    <br>
+    <div *ngIf="falloCrear">
+      <p>Error al crear el proyecto</p>
+    </div>
+    <div *ngIf="creado">
+      <p>Proyecto creado correctamente</p>
+    </div>
+</div>
