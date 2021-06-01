@@ -1,0 +1,13 @@
+.footer {
+    color: rgb(219, 219, 219);
+    background-color: #4e4e4e;
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+}
+
+.nombreCopy {
+    display: flex;
+    justify-content: center;
+}
+

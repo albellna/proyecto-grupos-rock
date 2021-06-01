@@ -17,3 +17,8 @@ button {
     padding: 5px 10px;
     width: 100%;
   }
+
+  .tituloBanda {
+    font-family: 'Metal Mania';
+    font-size: 50px;
+}
