@@ -1,23 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListadoComponent } from './listado/listado.component';
 import { GruposComponent } from './grupos/grupos.component';
 import { DetallesGrupoComponent } from './detalles-grupo/detalles-grupo.component';
 import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.component';
+import { CrearGrupoComponent } from './crear-grupo/crear-grupo.component';
+import { FormsModule } from '@angular/forms';
+import { ModificarGrupoComponent } from './modificar-grupo/modificar-grupo.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
-    ListadoComponent,
     GruposComponent,
     DetallesGrupoComponent,
-    BarraBusquedaComponent
+    BarraBusquedaComponent,
+    CrearGrupoComponent,
+    ModificarGrupoComponent,
+    FooterComponent
   ],
   exports: [
-    ListadoComponent
+    GruposComponent,
+    FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class GruposRockModule { }

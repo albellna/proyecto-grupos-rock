@@ -1,12 +1,18 @@
-<h1>Grupos de rock</h1>
+<h1 class="titulo">Listado de grupos de Rock de los 70</h1>
+<app-barra-busqueda (resultadoBusqueda)="resultados($event)"></app-barra-busqueda>
+<button class="crearGrupo" (click)="crearGrupo()">Crear nuevo grupo</button>
 <hr>
-<ul class="list-group">
-    <div *ngIf="gruposArray != []">
-        <li class="list-group-item" *ngFor="let grupo of gruposArray">
-            <h2>{{grupo.name}}</h2> 
-                <p>{{grupo.miembros}}</p>
+<div class="listado" *ngIf="mostrarGrupos; else sinDatos">
+    <div class="row">
+        <div class="col-sm-6 datosGrupos" *ngFor="let grupo of gruposArray">
+            <h2 class="tituloGrupo">{{grupo.name}}</h2> 
+                <p><span class="negrita">Miembros:</span> {{grupo.miembros}}</p>
             <button (click)="detallesGrupo(grupo._id)">Ver detalles</button>
             <button (click)="borrarGrupo(grupo._id)">Borrar</button>
-        </li>
+        </div>
     </div>
-</ul>
+</div>
+<ng-template #sinDatos>
+    <h3>No hay resultados</h3>
+</ng-template>
+

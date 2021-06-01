@@ -1,24 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: 200;
-  }
-  
-  html, body {
-    
-    background: white;
-    margin: 20px;
-    color: #3e4144;
-    -webkit-font-smoothing: antialiased;
+    font-family: 'RocknRoll One', sans-serif;
   }
 
-  button {
-    border-radius: 5px;
-    border: 0px;
-    cursor: pointer;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 5px 10px;
+  html, body {
+    background: url(assets/images/3387872265_a513d0e31b_b.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    margin: 20px;
+    color: #4e4e4e;
+    -webkit-font-smoothing: antialiased;
   }
   
   button:hover {

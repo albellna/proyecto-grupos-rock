@@ -1,11 +1,7 @@
-.video {
-    display: flex;
-    justify-content: center;
-}
-
-.botones {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.importante {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 button {

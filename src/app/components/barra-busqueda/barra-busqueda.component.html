@@ -1,8 +1,14 @@
-<h5>Buscar:</h5>
-<input
+<div class="row">
+    <div class="col-sm-10">
+        <input
     type="text"
     class="form-control"
-    placeholder="Buscar grupo, artista, año..."
+    placeholder="Buscar por nombre de grupo"
     (keyup.enter)="buscar()"
     #txtBuscar
 >
+    </div>
+    <div class="col-sm-2">
+        <button class="float-left" (click)="resetBusqueda()">Borrar filtro</button>
+    </div>
+</div>
